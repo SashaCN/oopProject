@@ -5,7 +5,7 @@ use models\BaseModel;
 use models\IModel;
 use models\File;
 
-class Article extends BaseModel implements IModel
+class Article extends BaseModel implements IModel 
 {
 
     public $error;
@@ -17,7 +17,7 @@ class Article extends BaseModel implements IModel
 
     public function __sleep()
     {
-        //return array_merge(parent::__sleep(), ['date_added']);
+        //return array_merge(parent::__sleep(), ['date_added']); 
         return parent::__sleep();
     }
     
@@ -65,7 +65,7 @@ class Article extends BaseModel implements IModel
 
     public function view($id)
     {
-        //из списка достаем тот, который нам нужен
+        //из списка достаем тот, который нам нужен 
         $key =  $this->getOneById($id);
         return (self::getList()[$key])?:null;
     }
